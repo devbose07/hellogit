@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fototwist.app.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <ListView
+        android:id="@+id/container_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_container_height"
+        android:layout_alignParentBottom="true"
+        tools:context="com.fototwist.app.MainActivity"
+        tools:ignore="MergeRootFrame" />
+
+    <ListView
+        android:id="@+id/container_left"
+        android:layout_width="@dimen/left_container_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:divider="@null"
+        tools:context="com.fototwist.app.MainActivity"
+        tools:ignore="MergeRootFrame" />
+
+    <FrameLayout
+        android:id="@+id/container_center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/container_bottom"
+        android:layout_toRightOf="@id/container_left"
+        tools:context="com.fototwist.app.MainActivity"
+        tools:ignore="MergeRootFrame" />
+
+</RelativeLayout>
